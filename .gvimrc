@@ -3,6 +3,7 @@
 
 " kill the menubar
   set guioptions-=T
+  set guioptions-=m
 
 " kill the scrollbars
   set guioptions-=r

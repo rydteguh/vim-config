@@ -228,4 +228,10 @@
   nmap <Leader>rl :wa<CR> :call RunLastSpec()<CR>
   nmap <Leader>ra :wa<CR> :call RunAllSpecs()<CR>
 
+" MultipleCursor
+  NeoBundle "git@github.com:terryma/vim-multiple-cursors.git"
+
+" Blade syntax highlighting
+  NeoBundle 'xsbeats/vim-blade'
+
  call neobundle#end()
