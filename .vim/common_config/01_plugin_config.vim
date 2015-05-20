@@ -234,4 +234,8 @@
 " Blade syntax highlighting
   NeoBundle 'xsbeats/vim-blade'
 
+" facebook
+  NeoBundle 'mxw/vim-xhp'
+  NeoBundle 'hhvm/vim-hack'
+
  call neobundle#end()
