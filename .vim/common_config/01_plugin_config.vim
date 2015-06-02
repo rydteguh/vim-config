@@ -17,6 +17,10 @@ call plug#begin('~/.vim/plugged')
  " Vim airline configs
   Plug 'bling/vim-airline'
   let g:airline_powerline_fonts = 1
+  let g:airline#extensions#default#layout = [
+        \ [ 'c' ],
+        \ [ ]
+        \ ]
 
 " Easy motion config
   Plug 'easymotion/vim-easymotion'
