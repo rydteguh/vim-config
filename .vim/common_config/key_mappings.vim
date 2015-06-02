@@ -51,8 +51,6 @@
 " Command mode: Ctrl-P
   cmap <C-S-P> <C-R>=expand("%:p:h") . "/" <cr>
 
-
-
 " Tricks
   map n nzz
   map N Nzz
