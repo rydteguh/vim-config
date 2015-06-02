@@ -20,20 +20,13 @@
 
  " Vim airline configs
   Bundle 'bling/vim-airline.git'
+  let g:airline_theme='solarized'
   let g:airline_powerline_fonts = 1
-  let g:airline_mode_map = {
-      \ '__' : '-',
-      \ 'n'  : 'N',
-      \ 'i'  : 'I',
-      \ 'R'  : 'R',
-      \ 'c'  : 'C',
-      \ 'v'  : 'V',
-      \ 'V'  : 'V',
-      \ '' : 'V',
-      \ 's'  : 'S',
-      \ 'S'  : 'S',
-      \ '' : 'S',
-      \ }
+
+  let g:airline#extensions#default#layout = [
+        \ [ 'c' ],
+        \ [ ]
+        \ ]
 
 " Easy motion config
   Bundle "Lokaltog/vim-easymotion.git"
