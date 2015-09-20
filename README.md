@@ -1,6 +1,6 @@
-# Neo Vim Config
+# KMKLabs Vim Config
 
-You should give it a try.
+Belum coba belum tahu.
 
 ## Pre-requisites
 
@@ -409,3 +409,7 @@ If you are going to contribute to our config, please make sure you are not overr
 Also remember that we have a custom_config directory if you want to make a change for just yourself.
 
 All PRs **must** be reviewed by at least one other person before being merged.
+
+## Credits
+
+Originally based off the Neo vim-config that was based off Edgecase vim-config that was based off ....
