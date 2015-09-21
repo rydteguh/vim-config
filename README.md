@@ -2,6 +2,11 @@
 
 Belum coba belum tahu.
 
+# Quick Install
+```
+wget -O - https://raw.githubusercontent.com/KMK-ONLINE/vim-config/master/install.sh | bash
+```
+
 ## Pre-requisites
 
 This config is built primarily to work on top of the OSX version of `MacVim`, but should be usable on top of other `vim` or `gvim` installations that are built with all of the `vim` features necessary to support the used plugins.
