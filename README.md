@@ -2,7 +2,7 @@
 
 Belum coba belum tahu.
 
-# Quick Install
+## Quick Install
 ```
 wget -O - https://raw.githubusercontent.com/KMK-ONLINE/vim-config/master/install.sh | bash
 ```
