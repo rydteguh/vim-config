@@ -228,5 +228,9 @@
   Bundle 'mxw/vim-xhp'
   Bundle 'hhvm/vim-hack'
 
+
+" php-cs-fixer
+  Bundle 'stephpy/vim-php-cs-fixer'
+
 filetype plugin indent on
 
