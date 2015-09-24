@@ -93,6 +93,16 @@ Common practice is to symlink a folder containing your custom configuration file
 * `gs` - jump to schema file
 * `gr` - jump to routes file
 * `gm` - jump to Gemfile
+* `gf` - jump tp highlighted file
+
+#### Jump file command
+* `:Econtroller [name]` - jump to controller
+* `:Emodel [name]` - jump to model
+* `:Eview [name]` - jump to view
+* `:Espec [name]` - jump to spec
+
+example: `:Econtroller users` for jumping to users_controller.rb
+If you use it without argument, it will jump to current related file
 
 #### Macros (from within insert mode type abbreviation followed by punctuation or space)
 
