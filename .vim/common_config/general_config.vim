@@ -32,6 +32,9 @@
 " highlight the search matches
   set hlsearch
 
+" highlight cursor line
+  set cursorline
+
 " searching is case insensitive when all lowercase
   set ignorecase smartcase
 

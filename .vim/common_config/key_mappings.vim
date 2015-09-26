@@ -53,3 +53,15 @@
 " insert the path of currently edited file into a command
 " Command mode: Ctrl-P
   cmap <C-S-P> <C-R>=expand("%:p:h") . "/" <cr>
+
+
+
+" Tricks
+  map n nzz
+  map N Nzz
+  map <C-o> <C-o>zz
+  map <C-i> <C-i>zz
+  nnoremap ; :
+
+" PHP
+  imap <C-l> ->
