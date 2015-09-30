@@ -2,10 +2,6 @@
 
 Belum coba belum tahu.
 
-## Quick Install
-```
-wget -O - https://raw.githubusercontent.com/KMK-ONLINE/vim-config/master/install.sh | bash
-```
 
 ## Pre-requisites
 
@@ -14,6 +10,11 @@ This config is built primarily to work on top of the OSX version of `MacVim`, bu
 ## Font Requirement
 This vim configuration requires the Meslo font from
 [https://github.com/Lokaltog/powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
+
+## Quick Install
+```
+wget -O - https://raw.githubusercontent.com/KMK-ONLINE/vim-config/master/install.sh | bash
+```
 
 ## Customizing
 
