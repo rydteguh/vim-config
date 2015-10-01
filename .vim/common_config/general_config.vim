@@ -109,3 +109,6 @@
 
 " JSON is JS
   au BufNewFile,BufRead *.json set ai filetype=javascript
+
+" *.hh is hack file (php)
+  au BufRead,BufNewFile *.hh set filetype=php
