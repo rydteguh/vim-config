@@ -112,3 +112,6 @@
 
 " *.hh is hack file (php)
   au BufRead,BufNewFile *.hh set filetype=php
+
+" *.es6 is javascript file
+  au BufRead,BufNewFile *.es6 set filetype=js
