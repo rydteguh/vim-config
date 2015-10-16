@@ -234,6 +234,10 @@
 " facebook
   Bundle 'mxw/vim-xhp'
   Bundle 'hhvm/vim-hack'
+  autocmd FileType php set tabstop=4|set softtabstop=4|set shiftwidth=4
+  autocmd FileType hack set tabstop=4|set softtabstop=4|set shiftwidth=4
+  au BufEnter *.php set ai sw=4 ts=4 sta et fo=croql
+  au BufEnter *.hh set ai sw=4 ts=4 sta et fo=croql
 
 
 " php-cs-fixer
