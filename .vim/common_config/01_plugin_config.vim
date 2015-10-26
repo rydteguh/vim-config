@@ -45,9 +45,11 @@
 
 " CtrlP
   Bundle "kien/ctrlp.vim.git"
-    nnoremap <Leader>b :<C-U>CtrlPBuffer<CR>
-    nnoremap <Leader>t :<C-U>CtrlP<CR>
-    nnoremap <Leader>T :<C-U>CtrlPTag<CR>
+    nmap <Leader>b :<C-U>CtrlPBuffer<CR>
+    nmap <Leader>t :<C-U>CtrlP<CR>
+    nmap <C-b> :<C-U>CtrlPBuffer<CR>
+    nmap <C-p> :<C-U>CtrlP<CR>
+    nmap <Leader>T :<C-U>CtrlPTag<CR>
 
     let g:ctrlp_switch_buffer = 0
     let g:ctrlp_working_path_mode = 0
