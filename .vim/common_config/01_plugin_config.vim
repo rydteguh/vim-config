@@ -134,7 +134,12 @@
     autocmd VimEnter * call CustomTabularPatterns()
 
     " shortcut to align text with Tabular
-    map <Leader>a :Tabularize<space>
+    nmap <Leader>= :Tabularize /=<CR>
+    vmap <Leader>= :Tabularize /=<CR>
+    nmap <Leader>> :Tabularize /=><CR>
+    vmap <Leader>> :Tabularize /=><CR>
+    nmap <Leader>; :Tabularize /:<CR>
+    vmap <Leader>; :Tabularize /:<CR>
 
 " ZoomWin to fullscreen a particular buffer without losing others
   Bundle "vim-scripts/ZoomWin.git"
