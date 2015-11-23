@@ -65,3 +65,22 @@
 
 " PHP
   imap <C-l> ->
+
+" CTRL-X and SHIFT-Del are Cut
+vnoremap <C-X> "+x
+vnoremap <S-Del> "+x
+
+" CTRL-C and CTRL-Insert are Copy
+vnoremap <C-C> "+y
+vnoremap <C-Insert> "+y
+
+" CTRL-V and SHIFT-Insert are Paste
+map <C-V>Paste"+gP
+map <S-Insert>map"+gP
+
+cmap <C-V>gP<C-R>+
+cmap <S-Insert>cmap<C-R>+
+
+" CTRL-Z is Undo; not in cmdline though
+noremap <C-Z> u
+inoremap <C-Z> <C-O>u
