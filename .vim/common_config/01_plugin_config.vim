@@ -17,6 +17,8 @@
   Bundle "vim-scripts/matchit.zip"
   Bundle "vim-scripts/ruby-matchit.git"
   Bundle "tpope/vim-abolish.git"
+  Bundle "jiangmiao/auto-pairs"
+  
 
  " Vim airline configs
   Bundle 'bling/vim-airline.git'
@@ -29,7 +31,7 @@
         \ ]
 
 " Easy motion config
-  Bundle "Lokaltog/vim-easymotion.git"
+  Bundle "Lokaltog/vim-easy.git"
 
 "Supertab code completion"
   Bundle "ervandew/supertab.git"
