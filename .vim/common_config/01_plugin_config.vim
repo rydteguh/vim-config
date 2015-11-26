@@ -31,7 +31,7 @@
         \ ]
 
 " Easy motion config
-  Bundle "Lokaltog/vim-easy.git"
+  Bundle "easymotion/vim-easymotion"
 
 "Supertab code completion"
   Bundle "ervandew/supertab.git"
