@@ -3,22 +3,16 @@
   call vundle#rc()
 
 " Plugins requiring no additional configuration or keymaps
-  Bundle "michaeljsmith/vim-indent-object.git"
-  Bundle "oscarh/vimerl.git"
-  Bundle "pangloss/vim-javascript.git"
   Bundle "tomtom/tcomment_vim.git"
   Bundle "tpope/vim-endwise.git"
   Bundle "tpope/vim-fugitive.git"
-  Bundle "tpope/vim-haml.git"
   Bundle "tpope/vim-rake.git"
   Bundle "tpope/vim-repeat.git"
   Bundle "vim-ruby/vim-ruby.git"
-  Bundle "vim-scripts/L9.git"
-  Bundle "vim-scripts/matchit.zip"
   Bundle "vim-scripts/ruby-matchit.git"
   Bundle "tpope/vim-abolish.git"
   Bundle "jiangmiao/auto-pairs"
-  
+
 
  " Vim airline configs
   Bundle 'bling/vim-airline.git'
@@ -36,13 +30,6 @@
 "Supertab code completion"
   Bundle "ervandew/supertab.git"
   let g:SuperTabContextDefaultCompletionType = "<c-n>"
-
-
-" Dash Searching"
-  Bundle "rizzatti/funcoo.vim.git"
-  Bundle "rizzatti/dash.vim.git"
-    nmap <Leader>qs <Plug>DashSearch
-    nmap <Leader>qa <Plug>DashGlobalSearch
 
 
 " CtrlP
@@ -63,10 +50,6 @@
       let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
     endif
 
-" Go
-  Bundle "jnwhiteh/vim-golang.git"
-    au BufNewFile,BufRead *.go set filetype=go
-
 " Slim
   Bundle "slim-template/vim-slim.git"
     au BufNewFile,BufRead *.slim set filetype=slim
@@ -78,10 +61,6 @@
 " Handlebars, Mustache, and Friends
   Bundle "mustache/vim-mustache-handlebars.git"
   au  BufNewFile,BufRead *.mustache,*.handlebars,*.hbs,*.hogan,*.hulk,*.hjs set filetype=html syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
-
-" Stylus
-  Bundle "wavded/vim-stylus.git"
-    au BufNewFile,BufRead *.styl set filetype=stylus
 
 " Coffee script
   Bundle "kchmck/vim-coffee-script.git"
@@ -143,11 +122,6 @@
     nmap <Leader>; :Tabularize /:<CR>
     vmap <Leader>; :Tabularize /:<CR>
 
-" ZoomWin to fullscreen a particular buffer without losing others
-  Bundle "vim-scripts/ZoomWin.git"
-    map <Leader>z :ZoomWin<CR>
-
-
 " Unimpaired for keymaps for quicky manipulating lines and files
   Bundle "tpope/vim-unimpaired.git"
     " Bubble single lines
@@ -195,36 +169,6 @@
     let g:surround_61 = "<%= \r %>"
 
 
-" Clojure Highlighting"
-  Bundle "tpope/vim-fireplace.git"
-  Bundle "tpope/vim-classpath.git"
-  Bundle "guns/vim-clojure-static.git"
-  Bundle "vim-scripts/paredit.vim"
-  Bundle "losingkeys/vim-niji.git"
-  autocmd BufNewFile,BufRead *.clj set filetype=clojure
-  autocmd BufNewFile,BufRead *.edn set filetype=clojure
-  autocmd BufNewFile,BufRead *.cljs set filetype=clojure
-  autocmd BufNewFile,BufRead *.cljx set filetype=clojure
-
-  let g:paredit_leader= '\'
-  let vimclojure#ParenRainbow  = 1
-
-" Jade Highlighting"
-  Bundle "digitaltoad/vim-jade.git"
-  autocmd BufNewFile,BufRead *.jade set filetype=jade
-
-" Scala Highlighting"
-  Bundle "derekwyatt/vim-scala.git"
-  autocmd BufNewFile,BufRead *.scala set filetype=scala
-
-" Elixir plugin
-  Bundle "elixir-lang/vim-elixir.git"
-    au BufNewFile,BufRead *.ex set filetype=elixir
-    au BufNewFile,BufRead *.exs set filetype=elixir
-
-" Rust!
-  Bundle 'wting/rust.vim.git'
-
 " Easy async RSpec running
   Bundle 'thoughtbot/vim-rspec'
   Bundle "tpope/vim-dispatch.git"
@@ -249,8 +193,7 @@
   au BufEnter *.hh set ai sw=4 ts=4 sta et fo=croql
 
 
-" php-cs-fixer
+" php-cs-fixer (for indentation)
   Bundle 'stephpy/vim-php-cs-fixer'
 
 filetype plugin indent on
-
