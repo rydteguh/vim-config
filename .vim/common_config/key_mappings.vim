@@ -6,7 +6,8 @@
   nmap gW :only<cr>
 
 " go to the alternate file (previous buffer) with g-enter
-  nmap g 
+  nmap g
+ 
 
 " shortcuts for frequenly used files
   nmap gs :e db/schema.rb<cr>
@@ -65,22 +66,23 @@
 
 " PHP
   imap <C-l> ->
+  imap <C-k> =>
 
 " CTRL-X and SHIFT-Del are Cut
-vnoremap <C-X> "+x
-vnoremap <S-Del> "+x
+  vnoremap <C-X> "+x
+  vnoremap <S-Del> "+x
 
 " CTRL-C and CTRL-Insert are Copy
-vnoremap <C-C> "+y
-vnoremap <C-Insert> "+y
+  vnoremap <C-C> "+y
+  vnoremap <C-Insert> "+y
 
 " CTRL-V and SHIFT-Insert are Paste
-map <C-V>Paste"+gP
-map <S-Insert>map"+gP
+  map <C-V> "+gP
+  map <S-Insert> "+gP
 
-cmap <C-V>gP<C-R>+
-cmap <S-Insert>cmap<C-R>+
+  cmap <C-V> gP<C-R>+
+  cmap <S-Insert> cmap<C-R>+
 
 " CTRL-Z is Undo; not in cmdline though
-noremap <C-Z> u
-inoremap <C-Z> <C-O>u
+  noremap <C-Z> u
+  inoremap <C-Z> <C-O>u
