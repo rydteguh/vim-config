@@ -31,23 +31,6 @@
   Bundle "ervandew/supertab.git"
   let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
-" Snippet
-" http://stackoverflow.com/a/22253548/927748
-  Bundle 'SirVer/ultisnips'
-  Bundle 'honza/vim-snippets'
-  Bundle 'Valloric/YouCompleteMe'
-
-  let g:SuperTabDefaultCompletionType    = '<C-n>'
-  let g:SuperTabCrMapping                = 0
-  let g:UltiSnipsExpandTrigger           = "<tab>"
-  let g:UltiSnipsJumpForwardTrigger      = '<tab>'
-  let g:UltiSnipsJumpBackwardTrigger     = "<s-tab>"
-  let g:UltiSnipsEditSplit               = "vertical"
-  let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
-  let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
-
-
-
 " CtrlP
   Bundle "kien/ctrlp.vim.git"
     nmap <Leader>b :<C-U>CtrlPBuffer<CR>
