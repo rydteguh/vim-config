@@ -5,10 +5,6 @@
 " close all other windows (in the current tab)
   nmap gW :only<cr>
 
-" go to the alternate file (previous buffer) with g-enter
-  nmap g
- 
-
 " shortcuts for frequenly used files
   nmap gs :e db/schema.rb<cr>
   nmap gr :e config/routes.rb<cr>
