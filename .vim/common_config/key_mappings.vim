@@ -73,10 +73,7 @@
   vnoremap <C-Insert> "+y
 
 " CTRL-V and SHIFT-Insert are Paste
-  map <C-V> "+gP
   map <S-Insert> "+gP
-
-  cmap <C-V> gP<C-R>+
   cmap <S-Insert> cmap<C-R>+
 
 " CTRL-Z is Undo; not in cmdline though
