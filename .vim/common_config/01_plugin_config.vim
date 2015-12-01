@@ -12,7 +12,7 @@
   Bundle "vim-scripts/ruby-matchit.git"
   Bundle "tpope/vim-abolish.git"
   Bundle "jiangmiao/auto-pairs"
-
+  Bundle "mattn/emmet-vim"
 
  " Vim airline configs
   Bundle 'bling/vim-airline.git'
@@ -194,5 +194,12 @@
 
 " php-cs-fixer (for indentation)
   Bundle 'stephpy/vim-php-cs-fixer'
+
+" Fix indentation
+  autocmd FileType javascript set tabstop=2|set softtabstop=2|set shiftwidth=2
+  au BufEnter *.js set ai sw=2 ts=2 sta et fo=croql
+
+  autocmd FileType less set tabstop=2|set softtabstop=2|set shiftwidth=2
+  au BufEnter *.less set ai sw=2 ts=2 sta et fo=croql
 
 filetype plugin indent on
