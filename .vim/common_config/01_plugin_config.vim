@@ -11,7 +11,6 @@
   Bundle "vim-ruby/vim-ruby.git"
   Bundle "vim-scripts/ruby-matchit.git"
   Bundle "tpope/vim-abolish.git"
-  Bundle "jiangmiao/auto-pairs"
   Bundle "mattn/emmet-vim"
 
  " Vim airline configs
@@ -201,5 +200,6 @@
 
   autocmd FileType less set tabstop=2|set softtabstop=2|set shiftwidth=2
   au BufEnter *.less set ai sw=2 ts=2 sta et fo=croql
+  au BufEnter *.css set ai sw=2 ts=2 sta et fo=croql
 
 filetype plugin indent on
