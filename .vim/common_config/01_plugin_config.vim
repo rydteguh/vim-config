@@ -15,13 +15,7 @@
 
  " Vim airline configs
   Bundle 'bling/vim-airline.git'
-  let g:airline_theme='solarized'
   let g:airline_powerline_fonts = 1
-
-  let g:airline#extensions#default#layout = [
-        \ [ 'c' ],
-        \ [ ]
-        \ ]
 
 " Easy motion config
   Bundle "easymotion/vim-easymotion"
