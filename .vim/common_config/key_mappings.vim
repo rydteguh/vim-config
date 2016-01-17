@@ -58,7 +58,6 @@
   map N Nzz
   map <C-o> <C-o>zz
   map <C-i> <C-i>zz
-  nnoremap ; :
 
 " PHP
   imap <C-l> ->
