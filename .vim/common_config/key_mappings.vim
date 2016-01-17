@@ -74,7 +74,3 @@
 " CTRL-V and SHIFT-Insert are Paste
   map <S-Insert> "+gP
   cmap <S-Insert> cmap<C-R>+
-
-" CTRL-Z is Undo; not in cmdline though
-  noremap <C-Z> u
-  inoremap <C-Z> <C-O>u
