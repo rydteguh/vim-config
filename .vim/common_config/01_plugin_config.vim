@@ -42,6 +42,13 @@
       let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
     endif
 
+"FZF
+  " Bundle "junegunn/fzf.git"
+  " use fzf if ~/.fzf present, else keep the CtrlP
+    if !empty(glob("~/.fzf/bin/fzf"))
+      nnoremap <Leader>t :<C-U>FZF<CR>
+    endif
+
 " Slim
   Bundle "slim-template/vim-slim.git"
     au BufNewFile,BufRead *.slim set filetype=slim

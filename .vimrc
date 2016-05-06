@@ -1,4 +1,7 @@
 set rtp+=~/.vim/bundle/Vundle.vim/
+if !(empty(glob("~/.fzf/bin/fzf"))
+  set rtp+=~/.fzf
+endif
 
 runtime! custom_preconfig/*.vim
 runtime! common_config/*.vim
