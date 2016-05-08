@@ -25,7 +25,7 @@
   let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 " CtrlP
-  Bundle "kien/ctrlp.vim.git"
+  Bundle "ctrlpvim/ctrlp.vim.git"
     nmap <Leader>b :<C-U>CtrlPBuffer<CR>
     nmap <Leader>t :<C-U>CtrlP<CR>
     nmap <C-b> :<C-U>CtrlPBuffer<CR>
