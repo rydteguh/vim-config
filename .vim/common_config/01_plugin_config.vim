@@ -43,11 +43,16 @@ call plug#begin('~/.vim/plugged')
     endif
 
 "FZF
-  Plug 'junegunn/fzf'
-  " use fzf if ~/.fzf present, else keep the CtrlP
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'
+    "use fzf if ~/.fzf present, else keep the CtrlP
     if !empty(glob("~/.fzf/bin/fzf"))
       nnoremap <Leader>t :<C-U>FZF<CR>
     endif
+    let g:fzf_action = {
+      \ 'ctrl-t': 'tab split',
+      \ 'ctrl-x': 'split',
+      \ 'ctrl-v': 'vsplit' }
 
 " Slim
   Plug 'slim-template/vim-slim'
