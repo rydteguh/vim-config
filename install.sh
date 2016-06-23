@@ -16,14 +16,14 @@ if [ -d $VIM_INSTALL_DIR ]; then
 fi
 
 git clone $VIM_REPO $VIM_INSTALL_DIR;
-curl -fLo "${VIM_DIR}/autoload/plug.vim" --create-dirs \
-      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 
 # create symlinks
 ln -sf "${VIM_INSTALL_DIR}/.vim" $VIM_DIR
 ln -sf "${VIM_INSTALL_DIR}/.vimrc" ~/.vimrc
 ln -sf "${VIM_INSTALL_DIR}/.gvimrc" ~/.gvimrc
+
+curl -fLo "${VIM_DIR}/autoload/plug.vim" --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install bundle with Plug
 vim +PlugInstall +qall
