@@ -1,31 +1,31 @@
-" Plugins are managed by Bundle. Once VIM is open run :BundleInstall to
+" Plugins are managed by Plug. Once VIM is open run :BundleInstall to
 " install plugins.
-  call vundle#rc()
+call plug#begin('~/.vim/plugged')
 
 " Plugins requiring no additional configuration or keymaps
-  Bundle "tomtom/tcomment_vim.git"
-  Bundle "tpope/vim-endwise.git"
-  Bundle "tpope/vim-fugitive.git"
-  Bundle "tpope/vim-rake.git"
-  Bundle "tpope/vim-repeat.git"
-  Bundle "vim-ruby/vim-ruby.git"
-  Bundle "vim-scripts/ruby-matchit.git"
-  Bundle "tpope/vim-abolish.git"
-  Bundle "mattn/emmet-vim"
+  Plug 'tomtom/tcomment_vim'
+  Plug 'tpope/vim-endwise'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rake'
+  Plug 'tpope/vim-repeat'
+  Plug 'vim-ruby/vim-ruby'
+  Plug 'vim-scripts/ruby-matchit'
+  Plug 'tpope/vim-abolish'
+  Plug 'mattn/emmet-vim'
 
  " Vim airline configs
-  Bundle 'bling/vim-airline.git'
+  Plug 'bling/vim-airline'
   let g:airline_powerline_fonts = 1
 
 " Easy motion config
-  Bundle "easymotion/vim-easymotion"
+  Plug 'easymotion/vim-easymotion'
 
 "Supertab code completion"
-  Bundle "ervandew/supertab.git"
+  Plug 'ervandew/supertab'
   let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 " CtrlP
-  Bundle "ctrlpvim/ctrlp.vim.git"
+  Plug 'ctrlpvim/ctrlp.vim'
     nmap <Leader>b :<C-U>CtrlPBuffer<CR>
     nmap <Leader>t :<C-U>CtrlP<CR>
     nmap <C-b> :<C-U>CtrlPBuffer<CR>
@@ -43,30 +43,30 @@
     endif
 
 "FZF
-  Bundle "junegunn/fzf.git"
+  Plug 'junegunn/fzf'
   " use fzf if ~/.fzf present, else keep the CtrlP
     if !empty(glob("~/.fzf/bin/fzf"))
       nnoremap <Leader>t :<C-U>FZF<CR>
     endif
 
 " Slim
-  Bundle "slim-template/vim-slim.git"
+  Plug 'slim-template/vim-slim'
     au BufNewFile,BufRead *.slim set filetype=slim
 
 " Less
-  Bundle "groenewege/vim-less.git"
+  Plug 'groenewege/vim-less'
     au BufNewFile,BufRead *.less set filetype=less
 
 " Handlebars, Mustache, and Friends
-  Bundle "mustache/vim-mustache-handlebars.git"
+  Plug 'mustache/vim-mustache-handlebars'
   au  BufNewFile,BufRead *.mustache,*.handlebars,*.hbs,*.hogan,*.hulk,*.hjs set filetype=html syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
 
 " Coffee script
-  Bundle "kchmck/vim-coffee-script.git"
+  Plug 'kchmck/vim-coffee-script'
     au BufNewFile,BufRead *.coffee set filetype=coffee
 
 " AG aka The Silver Searcher
-  Bundle 'rking/ag.vim.git'
+  Plug 'rking/ag.vim'
     nmap g/ :Ag!<space>
     nmap g* :Ag! -w <C-R><C-W><space>
     nmap ga :AgAdd!<space>
@@ -77,13 +77,13 @@
 
 
 " Tagbar for navigation by tags using CTags
-  Bundle "majutsushi/tagbar.git"
+  Plug 'majutsushi/tagbar'
     let g:tagbar_autofocus = 1
     map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
     map <Leader>. :TagbarToggle<CR>
 
 " Markdown syntax highlighting
-  Bundle "tpope/vim-markdown.git"
+  Plug 'tpope/vim-markdown'
     augroup mkd
       autocmd BufNewFile,BufRead *.mkd      set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
       autocmd BufNewFile,BufRead *.md       set ai formatoptions=tcroqn2 comments=n:> filetype=markdown
@@ -91,14 +91,14 @@
     augroup END
 
 " NERDTree for project drawer
-  Bundle "scrooloose/nerdtree.git"
+  Plug 'scrooloose/nerdtree'
     let NERDTreeHijackNetrw = 0
     nmap <leader>g :NERDTreeToggle<CR>
     nmap <leader>G :NERDTreeFind<CR>
 
 
 " Tabular for aligning text
-  Bundle "godlygeek/tabular.git"
+  Plug 'godlygeek/tabular'
     function! CustomTabularPatterns()
       if exists('g:tabular_loaded')
         AddTabularPattern! symbols         / :/l0
@@ -122,7 +122,7 @@
     vmap <Leader>; :Tabularize /:<CR>
 
 " Unimpaired for keymaps for quicky manipulating lines and files
-  Bundle "tpope/vim-unimpaired.git"
+  Plug 'tpope/vim-unimpaired'
     " Bubble single lines
     nmap <C-Up> [e
     nmap <C-Down> ]e
@@ -133,7 +133,7 @@
 
 
 " Syntastic for catching syntax errors on save
-  Bundle "scrooloose/syntastic.git"
+  Plug 'scrooloose/syntastic'
     let g:syntastic_enable_signs=1
     " let g:syntastic_quiet_messages = {'level': 'warning'}
     " syntastic is too slow for haml and sass
@@ -143,12 +143,12 @@
 
 
 " gundo for awesome undo tree visualization
-  Bundle "sjl/gundo.vim.git"
+  Plug 'sjl/gundo.vim'
     map <Leader>h :GundoToggle<CR>
 
 
 " rails.vim, nuff' said
-  Bundle "tpope/vim-rails.git"
+  Plug 'tpope/vim-rails'
     map <Leader>oc :Rcontroller<Space>
     map <Leader>ov :Rview<Space>
     map <Leader>om :Rmodel<Space>
@@ -159,7 +159,7 @@
 
 
 " surround for adding surround 'physics'
-  Bundle "tpope/vim-surround.git"
+  Plug 'tpope/vim-surround'
     " # to surround with ruby string interpolation
     let g:surround_35 = "#{\r}"
     " - to surround with no-output erb tag
@@ -169,8 +169,8 @@
 
 
 " Easy async RSpec running
-  Bundle 'thoughtbot/vim-rspec'
-  Bundle "tpope/vim-dispatch.git"
+  Plug 'thoughtbot/vim-rspec'
+  Plug 'tpope/vim-dispatch'
   let g:rspec_command = "Dispatch rspec --format=progress --no-profile {spec}"
   nmap <Leader>rc :wa<CR> :call RunCurrentSpecFile()<CR>
   nmap <Leader>rn :wa<CR> :call RunNearestSpec()<CR>
@@ -178,14 +178,14 @@
   nmap <Leader>ra :wa<CR> :call RunAllSpecs()<CR>
 
 " MultipleCursor
-  Bundle "terryma/vim-multiple-cursors.git"
+  Plug 'terryma/vim-multiple-cursors'
 
 " Blade syntax highlighting
-  Bundle 'xsbeats/vim-blade'
+  Plug 'xsbeats/vim-blade'
 
 " facebook
-  Bundle 'mxw/vim-xhp'
-  Bundle 'hhvm/vim-hack'
+  Plug 'mxw/vim-xhp'
+  Plug 'hhvm/vim-hack'
   autocmd FileType php set tabstop=4|set softtabstop=4|set shiftwidth=4
   autocmd FileType hack set tabstop=4|set softtabstop=4|set shiftwidth=4
   au BufEnter *.php set ai sw=4 ts=4 sta et fo=croql
@@ -193,7 +193,7 @@
 
 
 " php-cs-fixer (for indentation)
-  Bundle 'stephpy/vim-php-cs-fixer'
+  Plug 'stephpy/vim-php-cs-fixer'
 
 " Fix indentation
   autocmd FileType javascript set tabstop=2|set softtabstop=2|set shiftwidth=2
@@ -202,5 +202,7 @@
   autocmd FileType less set tabstop=2|set softtabstop=2|set shiftwidth=2
   au BufEnter *.less set ai sw=2 ts=2 sta et fo=croql
   au BufEnter *.css set ai sw=2 ts=2 sta et fo=croql
+
+call plug#end()
 
 filetype plugin indent on

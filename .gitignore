@@ -1,3 +1,5 @@
 .vim/custom_config
 .vim/custom_preconfig
 .vim/.netrwhist
+.vim/autoload/
+.vim/plugged/
