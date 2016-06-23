@@ -43,7 +43,7 @@
     endif
 
 "FZF
-  " Bundle "junegunn/fzf.git"
+  Bundle "junegunn/fzf.git"
   " use fzf if ~/.fzf present, else keep the CtrlP
     if !empty(glob("~/.fzf/bin/fzf"))
       nnoremap <Leader>t :<C-U>FZF<CR>
@@ -135,10 +135,10 @@
 " Syntastic for catching syntax errors on save
   Bundle "scrooloose/syntastic.git"
     let g:syntastic_enable_signs=1
-    let g:syntastic_quiet_messages = {'level': 'warning'}
+    " let g:syntastic_quiet_messages = {'level': 'warning'}
     " syntastic is too slow for haml and sass
+    let g:syntastic_check_on_open = 1
     let g:syntastic_mode_map = { 'mode': 'active',
-                               \ 'active_filetypes': [],
                                \ 'passive_filetypes': ['haml','scss','sass'] }
 
 
