@@ -26,4 +26,4 @@ ln -sf "${VIM_INSTALL_DIR}/.gvimrc" ~/.gvimrc
 
 
 # Install bundle with Plug
-vim +PlugInstall +qall
+/usr/bin/vim +PlugInstall +qall
