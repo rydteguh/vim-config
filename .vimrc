@@ -1,7 +1,3 @@
-if !(empty(glob("~/.fzf/bin/fzf")))
-  set rtp+=~/.fzf
-endif
-
 runtime! custom_preconfig/*.vim
 runtime! common_config/*.vim
 runtime! custom_config/*.vim
