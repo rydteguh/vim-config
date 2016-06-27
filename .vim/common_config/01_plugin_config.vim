@@ -24,35 +24,15 @@ call plug#begin('~/.vim/plugged')
   Plug 'ervandew/supertab'
   let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
-" CtrlP
-  Plug 'ctrlpvim/ctrlp.vim'
-    nmap <Leader>b :<C-U>CtrlPBuffer<CR>
-    nmap <Leader>t :<C-U>CtrlP<CR>
-    nmap <C-b> :<C-U>CtrlPBuffer<CR>
-    nmap <C-p> :<C-U>CtrlP<CR>
-    nmap <Leader>T :<C-U>CtrlPTag<CR>
+" Command T
+  Plug 'wincent/command-t', {'do': 'cd ruby/command-t && ruby extconf.rb && make'}
+    nmap <C-p> :<C-U>CommandT<CR>
+    nmap <C-b> :<C-U>CommandTBuffer<CR>
 
-    let g:ctrlp_switch_buffer = 0
-    let g:ctrlp_working_path_mode = 0
-    if executable('ag')
-      let g:ctrlp_use_caching = 0
-      let g:ctrlp_user_command = 'ag %s -l -i --nocolor --nogroup -g ""'
-    else
-      " respect the .gitignore
-      let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
-    endif
-
-"FZF
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'junegunn/fzf.vim'
-    "use fzf if ~/.fzf present, else keep the CtrlP
-    if !empty(glob("~/.fzf/bin/fzf"))
-      nnoremap <Leader>t :<C-U>FZF<CR>
-    endif
-    let g:fzf_action = {
-      \ 'ctrl-t': 'tab split',
-      \ 'ctrl-x': 'split',
-      \ 'ctrl-v': 'vsplit' }
+    let g:CommandTFileScanner = "git"
+    let g:CommandTMaxHeight = 30
+    let g:CommandTMaxFiles = 500000
+    let g:CommandTSCMDirectories='.git,.hg,.svn,.bzr,_darcs,manifest.webapp'
 
 " Slim
   Plug 'slim-template/vim-slim'
