@@ -11,9 +11,15 @@ This config is built primarily to work on top of the OSX version of `MacVim`, bu
 This vim configuration requires the Meslo font from
 [https://github.com/Lokaltog/powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
 
-## Quick Install
+## Quick Install 
+### With Wget
 ```
-wget -O - https://raw.githubusercontent.com/KMK-ONLINE/vim-config/master/install.sh | bash
+sh -c "$(wget https://raw.githubusercontent.com/KMK-ONLINE/vim-config/master/install.sh -O -)"
+```
+
+### With Curl
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/KMK-ONLINE/vim-config/master/install.sh)"
 ```
 
 ## Customizing
