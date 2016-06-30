@@ -1,15 +1,18 @@
 # KMKLabs Vim Config
-
-Belum coba belum tahu.
-
+Konfigurasi VIM untuk kebutuhan KMKLabs Engineer
 
 ## Pre-requisites
 
-This config is built primarily to work on top of the OSX version of `MacVim`, but should be usable on top of other `vim` or `gvim` installations that are built with all of the `vim` features necessary to support the used plugins.
+This config is built primarily to work on top of Linux Gvim, but should be usable on top of other `macvim` or `gvim` installations that are built with all of the `vim` features necessary to support the used plugins.
 
-## Font Requirement
-This vim configuration requires the Meslo font from
-[https://github.com/Lokaltog/powerline-fonts](https://github.com/Lokaltog/powerline-fonts)
+Dependency yg perlu di install:
+- ruby-dev 
+- vim ruby version sama dengan system ruby.
+
+Untuk mengecek ruby di vim, gunakan `:ruby puts "#{RUBY_DESCRIPTION}"`
+Untuk mengecek ruby di system, gunakan `ruby -v`. 
+
+Jika versi ruby system tidak sama, silahkan install ruby menggunakan rvm atau rbenv.
 
 ## Quick Install 
 ### With Wget
@@ -97,17 +100,15 @@ If you use it without argument, it will jump to current related file
 * `Lidsa` - insert some lorem ipsum text
 * `rdebug` - insert ruby specfic debugger statement
 
-## CtrlP
+## Command-T
 
-Provides convenient ways to quickly reach the
-buffer/file/command/bookmark/tag you want. CtrlP searches with the
-fuzzy/partial pattern to which it converted an entered pattern.
+Beberapa  shortcut yg di customize untuk configurasi ini adalah:
 
-* `<leader>t` - fuzzy find files
-* `<leader>b` - fuzzy find open buffers
-* `<leader>T` - use fuzzy finder to navigate via tags instead of built-in tag navigation
-* `<C-j>` - open selected item in window in horizontal split
-* `<C-k>` - open selected item in vertical split
+https://github.com/wincent/command-t/blob/master/doc/command-t.txt
+* `<C-p>` - fuzzy find files
+* `<C-b>` - fuzzy find open buffers
+* `<C-s>` - open selected item in window in horizontal split
+* `<C-v>` - open selected item in vertical split
 
 ## Unimpaired
 
@@ -124,6 +125,7 @@ Syntastic is a syntax checking plugin that runs buffers through external syntax
 checkers as they are saved and opened. If syntax errors are detected, the user
 is notified and is happy because they didn't have to compile their code or
 execute their script to find them.
+
 
 ## Gundo
 
