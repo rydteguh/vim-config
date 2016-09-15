@@ -25,17 +25,14 @@ call plug#begin('~/.vim/plugged')
   let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 " Command T
-  "Plug 'wincent/command-t', {'do': 'cd ruby/command-t && ruby extconf.rb && make'}
-  "  nmap <C-p> :<C-U>CommandT<CR>
-  "  nmap <C-b> :<C-U>CommandTBuffer<CR>
+  Plug 'wincent/command-t', {'do': 'cd ruby/command-t && ruby extconf.rb && make'}
+    nmap <C-p> :<C-U>CommandT<CR>
+    nmap <C-b> :<C-U>CommandTBuffer<CR>
 
-  "  let g:CommandTFileScanner = "git"
-  "  let g:CommandTMaxHeight = 30
-  "  let g:CommandTMaxFiles = 500000
-  "  let g:CommandTSCMDirectories='.git,.hg,.svn,.bzr,_darcs,manifest.webapp'
-  Plug 'ctrlpvim/ctrlp.vim'
-    map <Leader>t :CtrlP<CR>
-    map <Leader>b :CtrlPBuffer<CR>
+    let g:CommandTFileScanner = "git"
+    let g:CommandTMaxHeight = 30
+    let g:CommandTMaxFiles = 500000
+    let g:CommandTSCMDirectories='.git,.hg,.svn,.bzr,_darcs,manifest.webapp'
 
 " Slim
   Plug 'slim-template/vim-slim'
