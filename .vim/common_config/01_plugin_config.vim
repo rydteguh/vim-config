@@ -81,6 +81,11 @@ call plug#begin('~/.vim/plugged')
     nmap <leader>g :NERDTreeToggle<CR>
     nmap <leader>G :NERDTreeFind<CR>
 
+" NERDTree Plugin
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" GitGutter
+  Plug 'airblade/vim-gitgutter'
 
 " Tabular for aligning text
   Plug 'godlygeek/tabular'
