@@ -80,6 +80,7 @@ call plug#begin('~/.vim/plugged')
     let NERDTreeHijackNetrw = 0
     nmap <leader>g :NERDTreeToggle<CR>
     nmap <leader>G :NERDTreeFind<CR>
+    let NERDTreeIgnore = ['\.pyc$']
 
 " NERDTree Plugin
   Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -180,6 +181,7 @@ call plug#begin('~/.vim/plugged')
   autocmd FileType hack set tabstop=4|set softtabstop=4|set shiftwidth=4
   au BufEnter *.php set ai sw=4 ts=4 sta et fo=croql
   au BufEnter *.hh set ai sw=4 ts=4 sta et fo=croql
+  au BufEnter *.py set ai sw=4 ts=4 sta et fo=croql
 
 
 " php-cs-fixer (for indentation)
