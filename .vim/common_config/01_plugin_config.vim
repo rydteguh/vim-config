@@ -195,6 +195,23 @@ call plug#begin('~/.vim/plugged')
   au BufEnter *.less set ai sw=2 ts=2 sta et fo=croql
   au BufEnter *.css set ai sw=2 ts=2 sta et fo=croql
 
+  Plug 'janko-m/vim-test'
+
+  function! s:cat(filename) abort
+    return system('cat '.a:filename)
+  endfunction
+
+  function! VagrantTransform(cmd) abort
+    let vagrant_project = get(matchlist(s:cat('Vagrantfile'), '\vconfig\.vm\.synced_folder \".+\", \"(.+)\",\s+disabled:\s+false'), 1)
+    return 'vagrant ssh --command '.shellescape('cd '.vagrant_project.'; '.a:cmd)
+  endfunction
+
+  let g:test#custom_transformations = {'vagrant': function('VagrantTransform')}
+  let g:test#transformation = 'vagrant'
+
+  nmap <silent> <leader>T :TestFile<CR>
+  nmap <silent> <leader>F :TestNearest<CR>
+
 call plug#end()
 
 filetype plugin indent on
