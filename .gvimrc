@@ -43,3 +43,10 @@
 
 runtime! custom_config/*.gvim
 
+" Go to tab by number
+  if has('mac')
+    noremap <D-1> 1gt
+    noremap <D-2> 2gt
+    noremap <D-3> 3gt
+    noremap <D-4> 4gt
+  endif
