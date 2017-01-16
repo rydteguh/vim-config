@@ -12,7 +12,12 @@ Dependency yg perlu di install:
 Untuk mengecek ruby di vim, gunakan `:ruby puts "#{RUBY_DESCRIPTION}"`
 Untuk mengecek ruby di system, gunakan `ruby -v`. 
 
-Jika versi ruby system tidak sama, silahkan install ruby menggunakan rvm atau rbenv.
+Jika versi ruby system tidak sama, silahkan install ruby menggunakan rvm atau rbenv. Selanjutnya, masuk ke directory plug-in command-t pada local workstation kalian, dan lakukan perintah sebagai berikut: 
+- make clean
+- make
+- sudo make install
+
+Cek kembali lagi pada GVIM, dan pastikan tidak terjadi segmentation fault.
 
 ## Quick Install 
 ### With Wget
