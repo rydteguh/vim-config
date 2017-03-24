@@ -198,6 +198,9 @@ call plug#begin('~/.vim/plugged')
   autocmd FileType scss set tabstop=2|set softtabstop=2|set shiftwidth=2
   au BufEnter *.scss set ai sw=2 ts=2 sta et fo=croql
 
+  autocmd FileType xbt.php set tabstop=2|set softtabstop=2|set shiftwidth=2
+  au BufEnter *.xbt.php set ai sw=2 ts=2 sta et fo=croql
+
   Plug 'janko-m/vim-test'
 
   function! s:cat(filename) abort
