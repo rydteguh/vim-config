@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-abolish'
   Plug 'mattn/emmet-vim'
 
+
  " Vim airline configs
   Plug 'bling/vim-airline'
   let g:airline_powerline_fonts = 1
