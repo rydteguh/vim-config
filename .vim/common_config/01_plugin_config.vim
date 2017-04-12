@@ -223,6 +223,14 @@ call plug#begin('~/.vim/plugged')
   nmap <silent> <leader>T :TestFile<CR>
   nmap <silent> <leader>F :TestNearest<CR>
 
+" Fix indentation
+  Plug 'vim-syntastic/syntastic'
+  let g:syntastic_javascript_checkers = ['eslint']
+  let g:syntastic_scss_checkers = ['stylelint']
+  let g:syntastic_mode_map = { 'mode': 'active',     
+        \ 'active_filetypes': ['scss','javascript']} 
+
+
 call plug#end()
 
 filetype plugin indent on
