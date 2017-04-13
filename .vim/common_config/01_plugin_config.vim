@@ -223,12 +223,12 @@ call plug#begin('~/.vim/plugged')
   nmap <silent> <leader>T :TestFile<CR>
   nmap <silent> <leader>F :TestNearest<CR>
 
-" Fix indentation
+" syntastic for eslint and stylelint
   Plug 'vim-syntastic/syntastic'
+  let g:syntastic_bash_hack = 0
+  let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': ['scss','javascript']}
   let g:syntastic_javascript_checkers = ['eslint']
   let g:syntastic_scss_checkers = ['stylelint']
-  let g:syntastic_mode_map = { 'mode': 'active',     
-        \ 'active_filetypes': ['scss','javascript']} 
 
 
 call plug#end()
