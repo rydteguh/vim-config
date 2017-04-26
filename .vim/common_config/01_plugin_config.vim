@@ -132,6 +132,8 @@ call plug#begin('~/.vim/plugged')
     let g:syntastic_check_on_open = 1
     let g:syntastic_mode_map = { 'mode': 'active',
                                \ 'passive_filetypes': ['haml','scss','sass'] }
+    let g:syntastic_ruby_checkers = ['rubocop']
+
 
 
 " gundo for awesome undo tree visualization
