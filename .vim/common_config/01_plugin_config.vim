@@ -179,7 +179,6 @@ call plug#begin('~/.vim/plugged')
 
 " facebook
   Plug 'mxw/vim-xhp'
-  Plug 'hhvm/vim-hack'
   autocmd FileType php set tabstop=4|set softtabstop=4|set shiftwidth=4
   autocmd FileType hack set tabstop=4|set softtabstop=4|set shiftwidth=4
   au BufEnter *.php set ai sw=4 ts=4 sta et fo=croql
